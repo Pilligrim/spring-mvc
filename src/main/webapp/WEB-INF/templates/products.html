@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GeekBrains - FORM</title>
+</head>
+<body>
+<h1>Форма отправки данных</h1>
+<form action="#" th:action="@{/prosucts}" method="POST" th:object="${product}">
+    name: <input type="text" name="name" class="form-control" placeholder="Имя">
+    <br>
+    surname: <input type="text" name="surname" placeholder="surname"/>
+    <br>
+    <button type="submit">Отправить</button>
+</form>
+<table border="1">
+    <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Cost</td>
+    <tr>Ид</tr>
+    <tr>Наименование</tr>
+    <tr>Стоимость</tr>
+    </thead>
+    <tbody>
+    <tr th:each="s, iterator : ${products}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.title}"></td>
+        <td th:date="${s.cost}"></td>
+    </tbody>
+</table>
+</body>
+</html>

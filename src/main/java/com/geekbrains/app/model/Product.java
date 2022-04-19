@@ -13,6 +13,11 @@ public class Product {
         this.cost = cost;
     }
 
+    public Product(String title, BigDecimal cost) {
+        this.title = title;
+        this.cost = cost;
+    }
+
     public Product() {
     }
 
