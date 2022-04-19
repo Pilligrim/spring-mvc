@@ -1,19 +1,18 @@
 package com.geekbrains.app.model;
 
-import java.math.BigDecimal;
 
 public class Product {
-   private Long id;
-   private String title;
-   private Double cost;
+    private Long id;
+    private String title;
+    private Integer cost;
 
-    public Product(Long id, String title, Double cost) {
+    public Product(Long id, String title, Integer cost) {
         this.id = id;
         this.title = title;
         this.cost = cost;
     }
 
-    public Product(String title, Double cost) {
+    public Product(String title, Integer cost) {
         this.title = title;
         this.cost = cost;
     }
@@ -37,11 +36,11 @@ public class Product {
         this.title = title;
     }
 
-    public Double getCost() {
+    public Integer getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(Integer cost) {
         this.cost = cost;
     }
 

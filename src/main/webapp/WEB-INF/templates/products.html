@@ -18,7 +18,7 @@
     <tr th:each="s, iterator : ${products}">
         <td th:text="${s.id}"></td>
         <td th:text="${s.title}"></td>
-        <td th:data="${s.cost}"></td>
+        <td th:text="${s.cost}"></td>
     </tbody>
 </table>
 </body>

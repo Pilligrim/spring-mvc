@@ -18,7 +18,7 @@ public class ProductRepositoryInMemory implements ProductRepository {
     public void init() {
         products = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            products.add(new Product((long) i, "Product" + i, i * 100.0));
+            products.add(new Product((long) i, "Product" + i, i * 100));
         }
         maxId = Long.valueOf(products.size());
     }
