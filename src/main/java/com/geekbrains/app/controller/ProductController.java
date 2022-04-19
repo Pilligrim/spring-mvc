@@ -37,14 +37,8 @@ public class ProductController {
     }
 
     @PostMapping("/create")
-    public String saveProduct(@RequestParam String name, @RequestParam BigDecimal score) {
-        Product product = new Product( name, score);
-        productService.save(product);
-        return "redirect:/products/show_all";
-    }
-
-    @PostMapping("/create")
-    public String saveProduct(@ModelAttribute Product product) {
+    public String saveProduct(@RequestParam String title, @RequestParam Double cost) {
+        Product product = new Product(title, cost);
         productService.save(product);
         return "redirect:/products/show_all";
     }

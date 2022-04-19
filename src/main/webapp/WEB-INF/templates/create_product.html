@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
@@ -10,15 +10,15 @@
 </head>
 <body>
 <div class="container">
-    <h2>Добавить студента</h2>
+    <h2>Добавить продукт</h2>
     <form method="post" th:action="@{'/products/create'}">
         <div class="mb-3">
             <label for="productTitle" class="form-label">Наименование</label>
-            <input type="text" name="name" class="form-control" id="productTitle">
+            <input type="text" name="title" class="form-control" id="productTitle">
         </div>
         <div class="mb-3">
             <label for="productCost" class="form-label">Стоимость</label>
-            <input type="number" name="score" class="form-control" id="productCost">
+            <input type="number" name="cost" class="form-control" id="productCost">
         </div>
         <button class="btn btn-primary" type="submit">Сохранить</button>
     </form>
