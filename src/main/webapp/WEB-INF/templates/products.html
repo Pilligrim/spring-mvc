@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GeekBrains - FORM</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Cost</td>
+    <tr>Ид</tr>
+    <tr>Наименование</tr>
+    <tr>Стоимость</tr>
+    </thead>
+    <tbody>
+    <tr th:each="s, iterator : ${products}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.title}"></td>
+        <td th:text="${s.cost}"></td>
+    </tbody>
+</table>
+</body>
+</html>
