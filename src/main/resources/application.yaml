@@ -2,3 +2,14 @@ server:
   port: 8189
   servlet:
     context-path: /app
+spring:
+  datasource:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=spring_mvc
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  show-sql: true

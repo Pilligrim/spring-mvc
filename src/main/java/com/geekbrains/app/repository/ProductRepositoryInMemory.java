@@ -4,7 +4,6 @@ import com.geekbrains.app.model.Product;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +13,9 @@ public class ProductRepositoryInMemory implements ProductRepository {
     private List<Product> products;
     private Long maxId;
 
+    public ProductRepositoryInMemory() {
+    }
+
     @PostConstruct
     public void init() {
         products = new ArrayList<>();
@@ -22,8 +24,6 @@ public class ProductRepositoryInMemory implements ProductRepository {
         }
         maxId = Long.valueOf(products.size());
     }
-
-    public ProductRepositoryInMemory() { }
 
     @Override
     public List<Product> getAll() {
@@ -39,6 +39,11 @@ public class ProductRepositoryInMemory implements ProductRepository {
     public void save(Product product) {
         product.setId(++maxId);
         products.add(product);
+    }
+
+    @Override
+    public void delete(Long id) {
+        products.removeIf(p -> id.equals(p.getId()));
     }
 
 }
