@@ -38,7 +38,7 @@ public class ProductController {
 
     @PostMapping("/create")
     public String saveProduct(@RequestParam String title, @RequestParam Integer cost) {
-        Product product = new Product(title, cost);
+        Product product = new Product(null,title, cost);
         productService.save(product);
         return "redirect:/products/show_all";
     }
