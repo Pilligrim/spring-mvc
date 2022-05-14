@@ -1,7 +1,6 @@
 package com.geekbrains.app.model;
 
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 

@@ -1,7 +1,6 @@
 package com.geekbrains.app.repository;
 
 import com.geekbrains.app.model.Product;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
